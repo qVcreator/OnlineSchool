@@ -1,0 +1,17 @@
+{% extends 'course/base.html' %}
+{% load course_tags %}
+{% load static %}
+
+{% block lesson %}
+<div id="overview_course">
+    <h2>
+        {% get_lesson lesson_id as lesson %}
+        {{ lesson.title }}
+    </h2>
+    <video id="video-content" controls>
+            {% with lesson.video as less %}
+            <source src="{% static less %}" type="video/mp4">
+            {% endwith %}
+    </video>
+</div>
+{% endblock %}

@@ -35,4 +35,4 @@ class Course(models.Model):
     cat = models.ForeignKey('Category', on_delete=models.PROTECT, null=True, verbose_name="Категории")
 
     def get_absolute_url(self):
-        return reverse('lesson', kwargs={'lesson_id': self.pk})
+        return reverse('lessons_by_course', kwargs={'course_id': self.pk})

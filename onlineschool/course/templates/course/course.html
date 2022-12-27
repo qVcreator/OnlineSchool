@@ -1,0 +1,16 @@
+{% extends 'course/base.html' %}
+
+{% block course %}
+<div id="overview_course">
+  {% if lessons %}
+  {% for l in lessons %}
+  <hr>
+  <form id="courses" action="{{ l.get_absolute_url }}">
+    <h4>{{ l.title }} <button id="linkcourse" type="submit">Смотреть</button> </h4>
+  </form>
+  {% endfor %}
+  {% else %}
+  <h4> Уроки недоступны </h4>
+  {% endif %}
+</div>
+{% endblock %}

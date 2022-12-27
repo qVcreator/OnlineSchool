@@ -2,11 +2,15 @@
 
 {% block courses %}
 <div id="overview_course">
-  <div clas="course">
-    {% for c in courses %}
-    <h4>{{ c.title }}</h4>
-    <button>Перейти</button>
-    {% endfor %}
-  </div>
-<div/>
+  {% if courses %}
+  {% for c in courses %}
+  <hr>
+  <form id="courses" action="{{ c.get_absolute_url }}">
+    <h4>{{ c.title }} <button id="linkcourse" type="submit">Перейти</button> </h4>
+  </form>
+  {% endfor %}
+  {% else %}
+  <h4> Курсов пока нет </h4>
+  {% endif %}
+</div>
 {% endblock %}

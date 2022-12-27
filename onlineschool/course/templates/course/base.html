@@ -11,7 +11,7 @@
 <body>
   <header>
     <div id="logo" onclick="slowScroll('#reg')"/>
-      <a href="#">PlusUltra</a>
+      <a href="{% url 'home' %}">PlusUltra</a>
   </header>
 
   {% block сats %}
@@ -19,5 +19,11 @@
 
 
   {% block courses %}
+  {% endblock %}
+
+  {% block course %}
+  {% endblock %}
+
+  {% block lesson %}
   {% endblock %}
 </body>
