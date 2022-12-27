@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-f6sqmlb(^wd1ymh*+u79u#*!2kp6-n*s09fuwwhhkd#e1hzv0e
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1']
 
 
 # Application definition
@@ -77,9 +77,9 @@ WSGI_APPLICATION = 'onlineschool.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'your_db_name',
+        'NAME': 'OnlineSchool',
         'USER': 'postgres',
-        'PASSWORD': 'your_db_password',
+        'PASSWORD': 'qwe123',
         'HOST': '127.0.0.1',
         'PORT': '5432',
     }

@@ -1,0 +1,12 @@
+{% extends 'course/base.html' %}
+
+{% block сats %}
+<div id="overview_course">
+    {% for c in cats %}
+    <div class="img">
+          <img src="{{c.image}}" width="60" height="60" alt="">
+          <a href="{{ c.get_absolute_url }}">{{c.name}}</a>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

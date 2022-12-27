@@ -1,0 +1,12 @@
+{% extends 'course/base.html' %}
+
+{% block courses %}
+<div id="overview_course">
+  <div clas="course">
+    {% for c in courses %}
+    <h4>{{ c.title }}</h4>
+    <button>Перейти</button>
+    {% endfor %}
+  </div>
+<div/>
+{% endblock %}
