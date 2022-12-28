@@ -1,0 +1,21 @@
+{% extends 'course/base.html' %}
+
+{% block login %}
+<div id="reg">
+    <div id="rectangle">
+
+      <div><span class="log_in">Вход</span></div>
+      <div><a class="reg_in" href="{% url 'register' %}" >Регистрация</a></div>
+
+      <form id="form_input_reg" method="post">
+          {% csrf_token %}
+          <div class="form-error">{{ form.non_field_errors }}</div>
+          {% for f in form %}
+            <p><label class="form-label" >{{f.label}}: </label>{{ f }}</p>
+            <div class="form-error">{{ f.errors }}</div>
+          {% endfor %}
+      <button type="submit" class="btn_reg">Войти</button>
+      </form>
+    </div>
+  </div>
+{% endblock %}

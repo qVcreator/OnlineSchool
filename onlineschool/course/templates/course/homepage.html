@@ -1,0 +1,104 @@
+{% extends 'course/base.html' %}
+
+{% block home %}
+  <header>
+      <div id="logo" onclick="slowScroll('#top')">
+        <span>PlusUltra</span>
+      </div>
+    <div id="about">
+      <a href="#" title="Возможности" onclick="slowScroll('#main')">Возможности</a>
+      <a href="#" onclick="slowScroll('#overview')" title="Преимущества">Преимущества</a>
+      <a href="#" onclick="slowScroll('#faq')" title="Ответы на вопросы">FAQ</a>
+      {% if request.user.is_authenticated %}
+      <a href="{% url 'categories' %}" title="Личный кабинет" >Личный кабинет</a>
+      {% else %}
+      <a href="{% url 'login' %}" title="Личный кабинет" >Личный кабинет</a>
+      {% endif %}
+    </div>
+  </header>
+
+  <div id="top">
+    <h1>Обучение</h1>
+    <h3>Без кнута, но с пряником!</h3>
+  </div>
+
+  <div id="main">
+    <div class="intro">
+      <h2>Хочешь подготовиться с 0 до 100?</h2>
+      <span>Тебе точно к нам!</span>
+    </div>
+    <div class="text">
+      <span>Задумывался ли ты когда-нибудь, что обучение может быть не в тягость? А ведь уже давно существует формат, который поможет тебе полюбить обучение и подготовиться на максимальный балл без особых усилий, все что требуется, это телефон или компютер и совсем немного желания идти к успеху, а остальное мы возьмем на себя!</span>
+    </div>
+  </div>
+
+  <div id="overview">
+    <h2>Преимущества</h2>
+    <h4>с нами все проще</h4>
+
+    <div class="img">
+      <img src="https://static.tildacdn.com/tild6664-6334-4532-b639-353731366531/Group_22.svg" width="60" height="60" alt="">
+      <span>Твой преподаватель - человек, который сдал ЕГЭ на высший балл</span>
+    </div>
+    <div class="img">
+      <img src="https://static.tildacdn.com/tild3034-3833-4866-b934-313436363065/002-feedback.svg" width="60" height="60" alt="">
+      <span>Все онлайн-разборы, шпаргалки и конспекты сохраняются</span>
+    </div>
+    <div class="img">
+      <img src="https://static.tildacdn.com/tild3936-6430-4030-b939-363738396432/Group_26.svg" width="60" height="60" alt="">
+      <span>Смотри вебинары в любое время и в любом месте</span>
+    </div>
+    <div class="img">
+      <img src="https://static.tildacdn.com/tild6361-3565-4632-a663-326163346339/Group_24.svg" width="60" height="60" alt="">
+      <span>Куратор - человек, который помогает тебе с домашними заданиями и разбором сложных тем</span>
+    </div>
+    <div class="img">
+      <img src="https://static.tildacdn.com/tild3034-3833-4866-b934-313436363065/002-feedback.svg" width="60" height="60" alt="">
+      <span>Все онлайн-разборы, шпаргалки и конспекты сохраняются</span>
+    </div>
+    <div class="img">
+        <img src="https://static.tildacdn.com/tild3933-6533-4937-a631-383730393338/Group_25.svg" width="60" height="60" alt="">
+        <span>ДЗ и пробники, которые позволяют отслеживать твой прогресс, составляются экспертами ЕГЭ</span>
+      </div>
+    <div class="img">
+        <img src="https://static.tildacdn.com/tild3630-3937-4832-a165-316364363936/Group_23.svg" width="60" height="60" alt="">
+        <span>Твой персональный менеджер ответит тебе в любое время на все твои вопросы</span>
+    </div>
+  </div>
+
+  <div id="faq">
+    <div>
+      <span class="title">Оплата</span><br>
+      <span class="heading">Как будет проходит оплата?</span>
+      <p>Оплата проходит через платформу в разделе курсы, где вы можете найти необходимый вам курс и произвести оплату, введя данные карты. Также вы можете связаться с менеджером и он полностью проконсультирует вас, как произвести оплату.</p>
+    </div>
+
+    <div>
+      <span class="title"></span><br>
+      <span class="heading"></span>
+      <p>                                              </p>
+    </div>
+
+    <div>
+      <span class="title">Гарантии</span><br>
+      <span class="heading">Какие гарантии есть</span>
+      <p>Гарантией выполнения и предоставления услуг является ваш чек, который приходит к вам на почту после оплаты вместе с договором публичной оферты.</p>
+    </div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    function slowScroll(id) {
+      $('html, body').animate({
+        scrollTop: $(id).offset().top
+      }, 500);
+    }
+
+    $(document).on("scroll", function () {
+      if($(window).scrollTop() === 0)
+        $("header").removeClass("fixed");
+      else
+        $("header").attr("class", "fixed");
+    });
+  </script>
+{% endblock %}

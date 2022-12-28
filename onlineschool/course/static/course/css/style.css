@@ -110,7 +110,7 @@ header.fixed #logo {
 
 #top {
   width: 100%;
-  background-image: url(https://www.lovelymockups.com/wp-content/uploads/2017/01/mackbook-on-table.jpg);
+  background-image: url(https://images.unsplash.com/1/work-station-straight-on-view.jpg?ixlib=rb-0.3.5&s=d055e15d0b8fd2de7295b726274d312b&dpr=1&auto=format&fit=crop&w=1000&q=80&cs=tinysrgb);
   background-blend-mode: multiply;
   background-color: #2e3a44;
   background-size: cover;
@@ -472,6 +472,177 @@ h1, h2, h3, h4, h5 {
     margin-right: 0!important;
     margin-left: 10%!important;
   }
+}
+
+#reg {
+  width: 100%;
+  height: 100%;
+  background-image: url(https://images.unsplash.com/1/work-station-straight-on-view.jpg?ixlib=rb-0.3.5&s=d055e15d0b8fd2de7295b726274d312b&dpr=1&auto=format&fit=crop&w=1000&q=80&cs=tinysrgb);
+  background-blend-mode: multiply;
+  background-color: #2e3a44;
+  background-size: cover;
+  text-align: center;
+  color: #fff;
+}
+
+@media (min-width: 1001px) {
+  #reg {
+    font-size: 3em;
+    height: 1000px;
+  }
+}
+
+@media (max-width: 1000px) and (min-width: 651px) {
+  #reg {
+    font-size: 2em;
+    height: 100%;
+  }
+}
+
+@media (max-width: 650px) {
+  #reg {
+    font-size: 1.3em;
+    padding-top: 50%;
+  }
+}
+
+@media (max-width: 450px) {
+  #reg {
+    font-size: 0.9em;
+  }
+}
+
+#form_input {
+  margin-top: 15px;
+  font-size: 1.1em;
+}
+
+
+
+#form_input_reg label {
+  color: #505050;
+  cursor: pointer;
+  font-size: 1.4em;
+  font-family: 'Roboto Slab', serif;
+}
+
+#form_input_reg label > span {
+  color: #e87e7e;
+}
+
+#form_input_reg input,#form_input_reg textarea {
+  margin-top: 20px;
+  width: 75%;
+  padding: 10px 2%;
+  border-radius: 7px;
+  border: 2px solid silver;
+  font-size: 0.8em;
+  color: #4a4a4a;
+}
+
+#form_input_reg input:focus, #form_input_reg textarea:focus {
+  border-color: #333;
+}
+
+
+#reg h1 {
+  padding-top: 20%;
+}
+
+#reg h3 {
+  color: #ccc;
+}
+
+#rectangle{
+
+  width: 1000%;
+
+  max-width: 800px;
+
+  max-height: 600px;
+
+  border-radius: 44px;
+
+  padding: 0 70px 70px;
+
+  position: absolute;
+
+  border-spacing: 0;
+
+  top: 0;
+
+  right: 0;
+
+  left: 0;
+
+  margin: auto;
+
+  margin-top: 15.5%;
+
+  overflow: auto;
+
+  background: #ffffff;
+}
+
+#rectangle a{
+  text-decoration: none;
+}
+
+.log_in {
+  font-weight: lighter;
+  color: #a3a0ad;
+  margin-bottom: 20px;
+  font-size: 1.5em;
+  text-decoration: none;
+  text-align: left;
+}
+
+.log_in:hover{
+  color: #000000;
+  cursor: pointer;
+}
+
+.reg_in {
+  font-weight: lighter;
+  color: #a3a0ad;
+  margin-bottom: 20px;
+  font-size: 1.5em;
+  text-decoration: none;
+  text-align: right;
+}
+
+.reg_in:hover{
+  color: #000000;
+  cursor: pointer;
+}
+
+.btn_reg {
+  align-items: center;
+  border-radius: 30px;
+  padding: 3px 6px;
+  font-size: 1.2em;
+  background-color: #5fa4d3;
+  text-shadow: #454545 0 0 2px;
+  cursor: pointer;
+  color: white;
+  font-family: 'Roboto Slab', serif;
+  margin-top: 10%;
+}
+
+.btn_reg:hover {
+  background-color: #4094cc;
+}
+
+.form-label {
+    display: inline-block;
+    min-width: 150px;
+    vertical-align: top;
+}
+
+.form-error ul {
+    list-style: none;
+    padding: 0;
+    color: #CC0000;
 }
 
 }

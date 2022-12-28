@@ -1,0 +1,19 @@
+{% extends 'course/base.html' %}
+
+{% block reg %}
+<div id="reg">
+    <div id="rectangle">
+
+      <div><a class="log_in" href="{% url 'login' %}">Вход</a></div>
+      <div><span class="reg_in">Регистрация</span></div>
+      <form id="form_input_reg" method="post">
+        {% csrf_token %}
+      {% for f in form %}
+        <p><label class="form-label" for="{{ f.id_for_label }}">{{f.label}}: </label>{{ f }}</p>
+        <div class="form-error">{{ f.errors }}</div>
+      {% endfor %}
+      <button type="submit" class="btn_reg">Регистрация</button>
+      </form>
+    </div>
+  </div>
+{% endblock %}
